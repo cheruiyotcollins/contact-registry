@@ -1,4 +1,4 @@
-package com.zurion.contactregistry.servlet;
+package com.zurion.contactregistry.controller;
 
 import com.zurion.contactregistry.dao.ContactDAO;
 import com.zurion.contactregistry.model.Contact;
@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet("/EditContactServlet")
+@WebServlet("/editContact")
 public class EditContactServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
