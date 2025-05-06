@@ -11,14 +11,74 @@
         <welcome-file>jsp/contactForm.jsp</welcome-file>
     </welcome-file-list>
 
+    <!-- Create Contact -->
     <servlet>
         <servlet-name>CreateContactServlet</servlet-name>
-        <servlet-class>com.contactregistry.controllers.CreateContactServlet</servlet-class>
+        <servlet-class>com.zurion.contactregistry.controller.CreateContactServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>CreateContactServlet</servlet-name>
         <url-pattern>/createContact</url-pattern>
+    </servlet-mapping>
+
+    <!-- List Contacts -->
+    <servlet>
+        <servlet-name>ListContactsServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.ListContactsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListContactsServlet</servlet-name>
+        <url-pattern>/listContacts</url-pattern>
+    </servlet-mapping>
+
+    <!-- Edit Contact -->
+    <servlet>
+        <servlet-name>EditContactServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.EditContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditContactServlet</servlet-name>
+        <url-pattern>/editContact</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Contact -->
+    <servlet>
+        <servlet-name>UpdateContactServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.UpdateContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateContactServlet</servlet-name>
+        <url-pattern>/updateContact</url-pattern>
+    </servlet-mapping>
+
+    <!-- Delete Contact -->
+    <servlet>
+        <servlet-name>DeleteContactServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.DeleteContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteContactServlet</servlet-name>
+        <url-pattern>/deleteContact</url-pattern>
+    </servlet-mapping>
+
+    <!-- Dashboard -->
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Report -->
+    <servlet>
+        <servlet-name>ReportServlet</servlet-name>
+        <servlet-class>com.zurion.contactregistry.controller.ReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportServlet</servlet-name>
+        <url-pattern>/report</url-pattern>
     </servlet-mapping>
 
 </web-app>
