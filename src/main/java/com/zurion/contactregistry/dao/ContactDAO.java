@@ -17,15 +17,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-package com.contactregistry.dao;
-
-import com.contactregistry.models.Contact;
-import com.contactregistry.utils.DBConnection;
-
-import java.sql.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ContactDAO {
 
