@@ -4,10 +4,22 @@
  */
 package com.zurion.contactregistry.controller;
 
-/**
- *
- * @author cheruiyotkelvincollins
- */
-public class CreateContactServlet {
-    
+@WebServlet("/createContact")
+public class CreateContactServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Contact contact = new Contact(
+            request.getParameter("fullName"),
+            request.getParameter("phone"),
+            request.getParameter("email"),
+            request.getParameter("idNumber"),
+            LocalDate.parse(request.getParameter("dob")),
+            request.getParameter("gender"),
+            request.getParameter("county")
+        );
+
+        ContactDAO dao = new ContactDAO();
+        dao.insertContact(contact);
+
+        response.sendRedirect("contactList.jsp");
+    }
 }
