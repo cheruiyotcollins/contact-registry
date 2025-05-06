@@ -31,6 +31,13 @@ import java.time.LocalDate;
                this.gender = gender;
               this.county = county;
           }
+           public Contact(int id, String fullName, String phoneNumber, String email, String idNumber) {
+        this.id = id;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.idNumber = idNumber;
+    }
           
          // Getters and Setters
            public int getId() { return id; }
