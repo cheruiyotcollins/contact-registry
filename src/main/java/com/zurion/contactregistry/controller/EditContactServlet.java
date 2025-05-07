@@ -25,11 +25,11 @@ public class EditContactServlet extends HttpServlet {
                 dispatcher.forward(request, response);
             } else {
                 // If contact is not found, redirect to the list page
-                response.sendRedirect("ContactListServlet");
+                response.sendRedirect("listContacts");
             }
         } else {
             // If no contactId is provided, redirect to the list page
-            response.sendRedirect("ContactListServlet");
+            response.sendRedirect("listContacts");
         }
     }
 }

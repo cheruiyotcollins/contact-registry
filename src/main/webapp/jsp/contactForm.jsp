@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Contact Form</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
     <h2>Add Contact</h2>

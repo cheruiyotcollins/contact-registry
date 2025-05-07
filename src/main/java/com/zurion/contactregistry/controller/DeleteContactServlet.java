@@ -30,7 +30,7 @@ public class DeleteContactServlet extends HttpServlet {
                 ContactDAO contactDAO = new ContactDAO();
                 contactDAO.deleteContact(contactId);
 
-                response.sendRedirect("dashboard");  
+                response.sendRedirect("listContacts");  
 
             } catch (NumberFormatException e) {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid contact ID.");

@@ -17,7 +17,7 @@ public class DBConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/contact_registry";
     private static final String USER = "collo";
-    private static final String PASSWORD = "myPassword";
+    private static final String PASSWORD = "Kipkirui92?";
 
     static {
         try {

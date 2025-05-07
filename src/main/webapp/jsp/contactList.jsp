@@ -2,7 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.zurion.contactregistry.model.Contact" %>
 <%
-    List<Contact> contacts = (List<Contact>) request.getAttribute("contacts");
+    List<Contact> contacts = (List<Contact>) request.getAttribute("contactList");
 %>
 <!DOCTYPE html>
 <html>
@@ -40,9 +40,12 @@
                 <td><%= contact.getDateOfBirth() %></td>
                 <td><%= contact.getGender() %></td>
                 <td><%= contact.getCounty() %></td>
-                <td>
+               <td>
                     <a href="editContact?id=<%= contact.getId() %>">Edit</a> |
-                    <a href="deleteContact?id=<%= contact.getId() %>" onclick="return confirm('Are you sure you want to delete this contact?');">Delete</a>
+                    <form action="deleteContact" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this contact?');">
+                    <input type="hidden" name="contactId" value="<%= contact.getId() %>">
+                    <button type="submit">Delete</button>
+                    </form>
                 </td>
             </tr>
         <%

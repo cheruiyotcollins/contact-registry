@@ -35,12 +35,15 @@ public class ContactDAO {
 
     // Get all contacts from the database
     public List<Contact> getAllContacts() {
+        
         List<Contact> contacts = new ArrayList<>();
         String sql = "SELECT * FROM contacts ORDER BY created_at DESC";
 
         try (Connection conn = DBConnection.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
+            System.out.println("Connected to:::::::::::::::::::::::::::::::::::: " + conn.getMetaData().getURL());
+          
 
             while (rs.next()) {
                 Contact contact = new Contact();
@@ -55,6 +58,7 @@ public class ContactDAO {
 
                 contacts.add(contact);
             }
+             System.out.println("This areL:::::::::::::::::::::::"+contacts.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -165,12 +169,24 @@ public List<Contact> getRecentContacts(int limit) throws SQLException {
         stmt.setInt(1, limit);
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
-            Contact c = new Contact( /* populate fields */ );
+            Contact c = new Contact();
+            c.setId(rs.getInt("id"));
+            c.setFullName(rs.getString("full_name"));
+            c.setPhoneNumber(rs.getString("phone_number"));
+            c.setEmail(rs.getString("email"));
+            c.setIdNumber(rs.getString("id_number"));
+            Date sqlDate = rs.getDate("date_of_birth");
+            if (sqlDate != null) {
+               c.setDateOfBirth(sqlDate.toLocalDate());
+               }
+            c.setGender(rs.getString("gender"));
+            c.setCounty(rs.getString("county"));
             list.add(c);
         }
     }
     return list;
 }
+
 public List<Contact> getContactsByCounty(String county) throws SQLException {
     List<Contact> list = new ArrayList<>();
     String sql = "SELECT * FROM contacts WHERE county = ?";
@@ -179,11 +195,23 @@ public List<Contact> getContactsByCounty(String county) throws SQLException {
         stmt.setString(1, county);
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
-            Contact c = new Contact( /* populate fields */ );
+            Contact c = new Contact();
+            c.setId(rs.getInt("id"));
+            c.setFullName(rs.getString("full_name"));
+            c.setPhoneNumber(rs.getString("phone_number"));
+            c.setEmail(rs.getString("email"));
+            c.setIdNumber(rs.getString("id_number"));
+            Date sqlDate = rs.getDate("date_of_birth");
+            if (sqlDate != null) {
+               c.setDateOfBirth(sqlDate.toLocalDate());
+               }
+            c.setGender(rs.getString("gender"));
+            c.setCounty(rs.getString("county"));
             list.add(c);
         }
     }
     return list;
 }
+
 
 }

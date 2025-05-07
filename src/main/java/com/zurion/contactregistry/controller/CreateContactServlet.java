@@ -30,6 +30,8 @@ public class CreateContactServlet extends HttpServlet {
         ContactDAO dao = new ContactDAO();
         dao.insertContact(contact);
 
-        response.sendRedirect("contactList.jsp");
+       response.sendRedirect(request.getContextPath() + "/listContacts");
+
+
     }
 }
