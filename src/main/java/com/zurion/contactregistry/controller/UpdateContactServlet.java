@@ -16,7 +16,6 @@ import com.zurion.contactregistry.dao.ContactDAO;
 import com.zurion.contactregistry.model.Contact;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 
 import java.io.IOException;
 

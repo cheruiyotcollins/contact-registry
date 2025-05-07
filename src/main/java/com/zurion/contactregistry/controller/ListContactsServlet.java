@@ -13,7 +13,6 @@ import com.zurion.contactregistry.dao.ContactDAO;
 import com.zurion.contactregistry.model.Contact;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
