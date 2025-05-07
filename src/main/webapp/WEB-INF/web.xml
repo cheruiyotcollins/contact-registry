@@ -7,9 +7,9 @@
 
     <display-name>ContactRegistry</display-name>
 
-    <welcome-file-list>
-        <welcome-file>jsp/contactForm.jsp</welcome-file>
-    </welcome-file-list>
+   <welcome-file-list>
+    <welcome-file>jsp/home.jsp</welcome-file>
+</welcome-file-list>
 
     <!-- Create Contact -->
     <servlet>

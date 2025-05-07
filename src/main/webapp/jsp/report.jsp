@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Contact Report</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     <style>
         table, th, td {
             border: 1px solid #ccc;
