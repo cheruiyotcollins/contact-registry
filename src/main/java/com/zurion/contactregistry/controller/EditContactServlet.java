@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet("/editContact")
 public class EditContactServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

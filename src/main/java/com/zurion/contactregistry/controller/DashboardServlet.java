@@ -21,7 +21,6 @@ import com.zurion.contactregistry.dao.ContactDAO;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 
-@WebServlet("/dashboard")
 public class DashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ContactDAO dao = new ContactDAO();

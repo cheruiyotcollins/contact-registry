@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import com.zurion.contactregistry.dao.ContactDAO;
 import com.zurion.contactregistry.model.Contact;
 
-@WebServlet("/createContact")
+
 public class CreateContactServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Contact contact = new Contact(

@@ -20,7 +20,6 @@ import javax.servlet.annotation.WebServlet;
 
 import java.io.IOException;
 
-@WebServlet("/UpdateContactServlet")
 public class UpdateContactServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
