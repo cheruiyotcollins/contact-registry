@@ -21,7 +21,7 @@ public class EditContactServlet extends HttpServlet {
             if (contact != null) {
                 // Set the contact as a request attribute to be used in the JSP page
                 request.setAttribute("contact", contact);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("editContact.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/editContact.jsp");
                 dispatcher.forward(request, response);
             } else {
                 // If contact is not found, redirect to the list page

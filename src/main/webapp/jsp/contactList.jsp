@@ -41,7 +41,7 @@
                 <td><%= contact.getGender() %></td>
                 <td><%= contact.getCounty() %></td>
                <td>
-                    <a href="editContact?id=<%= contact.getId() %>">Edit</a> |
+                    <a href="editContact?id=<%= contact.getId() %>">Edit</a>
                     <form action="deleteContact" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this contact?');">
                     <input type="hidden" name="contactId" value="<%= contact.getId() %>">
                     <button type="submit">Delete</button>
