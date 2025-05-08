@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
+     <jsp:include page="/jsp/includes/navbar.jsp" />
     <h2>Contact List</h2>
     <a href="jsp/contactForm.jsp">Add New Contact</a>
     <br><br>

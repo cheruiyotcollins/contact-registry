@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
+     <jsp:include page="/jsp/includes/navbar.jsp" />
     <h2>Admin Dashboard</h2>
-
     <div style="width: 45%; float: left;">
         <h3>Gender Distribution</h3>
         <canvas id="genderChart"></canvas>

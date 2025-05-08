@@ -6,6 +6,7 @@
    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
+    <jsp:include page="/jsp/includes/navbar.jsp" />
     <h2>Add Contact</h2>
     <form action="createContact" method="post">
         <label>Full Name:</label><br>

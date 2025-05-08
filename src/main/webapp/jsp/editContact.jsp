@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
 </head>
 <body>
+    <jsp:include page="/jsp/includes/navbar.jsp" />
     <h2>Edit Contact</h2>
     <form action="updateContact" method="post">
         <input type="hidden" name="id" value="${contact.id}">

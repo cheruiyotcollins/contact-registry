@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   
     <title>Contact Report</title>
      <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     <style>
@@ -15,7 +16,7 @@
     </style>
 </head>
 <body>
-
+ <jsp:include page="/jsp/includes/navbar.jsp" />
 <h2>Printable Contact Report</h2>
 
 <form method="get" action="report">
